@@ -143,3 +143,13 @@ DVC
 
     ECR_REPOSITORY_NAME = simple-app
 
+
+
+
+
+
+
+
+
+
+471112791120.dkr.ecr.eu-north-1.amazonaws.com/chest
