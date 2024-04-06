@@ -7,7 +7,6 @@ from cnnClassifier.entity.config_entity import EvaluationConfig
 from cnnClassifier.utils.common import read_yaml, create_directories,save_json
 
 
-
 class Evaluation:
     def __init__(self, config: EvaluationConfig):
         self.config = config
@@ -36,7 +35,8 @@ class Evaluation:
             shuffle=False,
             **dataflow_kwargs
         )
-    
+
+
     @staticmethod
     def load_model(path: Path) -> tf.keras.Model:
         return tf.keras.models.load_model(path)
@@ -72,4 +72,3 @@ class Evaluation:
                 mlflow.keras.log_model(self.model, "model", registered_model_name="VGG16Model")
             else:
                 mlflow.keras.log_model(self.model, "model")
-
